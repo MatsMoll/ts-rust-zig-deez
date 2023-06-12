@@ -13,6 +13,8 @@ RUN apt-get update && apt install -y make git curl && \
 
 COPY . .
 
+RUN swift build
+
 # Commands for docker run
 CMD make clean && \
     make ready
